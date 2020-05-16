@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <title>Frontend Mentor | Peter Wilson</title>
+</head>
+<body>
+  <header>
+    <section id="info">
+      <h1>Social Media Dashboard</h1>
+      <h3>Total Followers: 23,004</h3>
+    </section>
+    <section id="toggle-mode" onclick="toggleTheme()">
+      <div class="switch switch--horizontal">
+        <input id="radio-a" type="radio" name="first-switch"/>
+        <label for="radio-a">Dark Mode</label>
+        <input id="radio-b" type="radio" name="first-switch" checked="checked"/>
+        <label for="radio-b"></label><span class="toggle-outside"><span class="toggle-inside"></span></span>
+      </div>
+    </section>
+  </header> 
+  
+  <main>
+    <section id="stats-row">
+      <div class="card-lg">
+        
+        <p class="username"><img src="images/icon-facebook.svg" alt="facebook">@nathanf</p>
+        <p class="num-followers">1987</p>
+        <p class="title-followers">Followers</p>
+        <p class="increment">12 Today</p>
+      </div>
+      <div class="card-lg">
+        <p class="username">@nathanf</p>
+        <p class="num-followers">1044</p>
+        <p class="title-followers">Followers</p>
+        <p class="increment">99 Today</p>
+      </div>
+      <div class="card-lg">
+        <p class="username">@realnathanf</p>
+        <p class="num-followers">11k</p>
+        <p class="title-followers">Followers</p>
+        <p class="increment">1099 Today</p>
+      </div>
+      <div class="card-lg">
+        <p class="username">Nathan F.</p>
+        <p class="num-followers">8239</p>
+        <p class="title-followers">Subscribers</p>
+        <p class="increment">144 Today</p>
+      </div>
+    </section>
+
+    <section id="overview">
+      <div id="overview-title">
+        <h2>Overview - Today</h2>
+      </div>
+      <div class="row-one">
+        <div class="card-sm">
+          <p class="interactions">Page Views</p>
+          <p class="num-interactions">87</p>
+          <p class="perc">3%</p>
+        </div>
+        <div class="card-sm">
+          <p class="interactions">Likes</p>
+          <p class="num-interactions">52</p>
+          <p class="perc">2%</p>
+        </div>
+        <div class="card-sm">
+          <p class="interactions">Likes</p>
+          <p class="num-interactions">5462</p>
+          <p class="perc">2257%</p>
+        </div>
+        <div class="card-sm">
+          <p class="interactions">Profile Views</p>
+          <p class="num-interactions">52k</p>
+          <p class="perc">1375%</p>
+        </div>
+      </div>
+      <div class="row-two">
+        <div class="card-sm">
+          <p class="interactions">Retweets</p>
+          <p class="num-interactions">117</p>
+          <p class="perc">303%</p>
+        </div>
+        <div class="card-sm">
+          <p class="interactions">Likes</p>
+          <p class="num-interactions">507</p>
+          <p class="perc">553%</p>
+        </div>
+        <div class="card-sm">
+          <p class="interactions">Likes</p>
+          <p class="num-interations">107</p>
+          <p class="perc">19%</p>
+        </div>
+        <div class="card-sm">
+          <p class="interactions">Total Views</p>
+          <p class="num-interactions">1407</p>
+          <p class="perc">12%</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="http://petercwilson.com">Peter Wilson</a>.
+  </div>
+  <script>
+    // function to set a given theme/color-scheme
+ function setTheme(themeName) {
+  localStorage.setItem('theme', themeName);
+  document.documentElement.className = themeName;
+}
+// function to toggle between light and dark theme
+function toggleTheme() {
+  if (localStorage.getItem('theme') === 'light'){
+  setTheme('dark');
+  } else {
+  setTheme('light');
+  }
+}
+// Immediately invoked function to set the theme on initial load
+// (function () {
+//   if (localStorage.getItem('theme') === 'dark') {
+//    setTheme('dark');
+//   } else {
+//    setTheme('light');
+//   }
+// })();
+  </script>
+</body>
+</html>

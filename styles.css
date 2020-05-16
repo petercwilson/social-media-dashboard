@@ -1,0 +1,233 @@
+html body {
+  font-family: 'Inter', sans-serif;
+  border: 5px solid lightsalmon;
+  background: var(--bg);
+  max-width: 1440px;
+}
+
+.light {
+  --bg: hsl(0, 0%, 100%);
+  --topbg: hsl(225, 100%, 98%);
+  --cardbg: hsl(227, 47%, 96%);
+  --smtext: hsl(228, 34%, 66%);
+  --lgtext: hsl(230, 17%, 14%);
+  --toggle: hsl(230, 22%, 74%);
+}
+
+.dark {
+  --bg: hsl(230, 17%, 14%);
+  --topbg: hsl(232, 19%, 15%);
+  --cardbg: hsl(228, 28%, 20%);
+  --smtext: hsl(228, 12%, 44%);
+  --lgtext: hsl(0, 0%, 100%);
+  --gradDark: hsl(210, 78%, 56%);
+  --gradLight: hsl(146, 68%, 55%);
+  --toggle: linear-gradient(to right, var(--gradDark), var(--gradLight));
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid red;
+}
+
+.switch {
+  width: 24rem;
+  position: relative;
+}
+.switch input {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+.switch input:checked {
+  z-index: 1;
+}
+.switch input:checked + label {
+  opacity: 1;
+  cursor: default;
+}
+.switch input:not(:checked) + label:hover {
+  opacity: 0.5;
+}
+.switch label {
+  color: var(--smtext);
+  opacity: 0.33;
+  transition: opacity 0.25s ease;
+  cursor: pointer;
+}
+.switch .toggle-outside {
+  height: 100%;
+  border-radius: 2rem;
+  padding: 0.25rem;
+  overflow: hidden;
+  transition: 0.25s ease all;
+}
+.switch .toggle-inside {
+  border-radius: 5rem;
+  background: var(--lgtext);
+  position: absolute;
+  transition: 0.25s ease all;
+}
+.switch--horizontal {
+  width: 18rem;
+  height: 3rem;
+  margin: 0 auto;
+  font-size: 0;
+  margin-bottom: 1rem;
+}
+.switch--horizontal input {
+  height: 3rem;
+  width: 6rem;
+  left: 6rem;
+  margin: 0;
+}
+.switch--horizontal label {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  display: inline-block;
+  width: 6rem;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+}
+.switch--horizontal label:last-of-type {
+  margin-left: 6rem;
+}
+.switch--horizontal .toggle-outside {
+  background: var(--toggle);
+  position: absolute;
+  width: 6rem;
+  left: 6rem;
+}
+.switch--horizontal .toggle-inside {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.switch--horizontal input:checked ~ .toggle-outside .toggle-inside {
+  left: 0.25rem;
+}
+.switch--horizontal input ~ input:checked ~ .toggle-outside .toggle-inside {
+  left: 3.25rem;
+}
+
+/* HEADER ROW */
+
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--topbg);
+  justify-content: space-between;
+  height: 135px;
+}
+
+h1 {
+  font-weight: 700;
+  color: var(--lgtext);
+}
+
+h3 {
+  font-weight: 700;
+  color: var(--smtext);
+  font-size: 10px;
+}
+
+#info {
+  border: 5px solid yellow;
+  padding: 5px 10px;
+}
+
+#toggle-mode {
+  border: 5px solid green;
+  padding: 30px 10px;
+}
+
+/* STATS ROW */
+
+#stats-row {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  border: 5px solid blue;
+}
+
+.card-lg {
+  height: 240px;
+  width: 300px;
+  margin: 0 15px;
+  background-color: var(--cardbg);
+  border-radius: 5px;
+}
+
+.username {
+  font-size: 15px;
+}
+
+.num-followers {
+  font-size: 35px;
+  color: var(--lgtext);
+  font-weight: 700;
+}
+
+.title-followers {
+  font-size: 12px;
+}
+
+.increment {
+  font-size: 10px;
+}
+
+/* OVERVIEW ROWS */
+
+.card-sm {
+  height: 140px;
+  width: 300px;
+  margin: 0 15px;
+  background-color: var(--cardbg);
+  border-radius: 5px;
+}
+
+#overview {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 5px solid orange;
+}
+
+#overview-title {
+  text-align: left;
+}
+
+.interactions {
+  font-size: 14px;
+}
+
+.num-interactions {
+  color: var(--lgtext);
+}
+
+.row-one {
+  display: flex;
+  flex-direction: row;
+  border: 5px solid purple;
+}
+
+.row-two {
+  display: flex;
+  flex-direction: row;
+  border: 5px solid palevioletred;
+}
+
+/* FOOTER */
+
+.attribution {
+  font-size: 11px; text-align: center;
+  margin-top: 20px;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
