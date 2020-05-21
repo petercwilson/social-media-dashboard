@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en" class="light-theme">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -29,30 +29,37 @@
   
   <main>
     <section id="stats-row">
-      <div class="card-lg">
-        
-        <p class="username"><img src="images/icon-facebook.svg" alt="facebook">@nathanf</p>
+      <div class="card-lg fb-blue">
+        <img class="stats-img" src="images/icon-facebook.svg" alt="facebook">
+        <p class="username">@nathanf</p>
         <p class="num-followers">1987</p>
         <p class="title-followers">Followers</p>
-        <p class="increment">12 Today</p>
+        <img class="up-img" src="images/icon-up.svg" alt="up icon">
+        <p class="positive-increment">12 Today</p>
       </div>
-      <div class="card-lg">
+      <div class="card-lg twitter-blue">
+        <img class="stats-img" src="images/icon-twitter.svg" alt="facebook">
         <p class="username">@nathanf</p>
         <p class="num-followers">1044</p>
         <p class="title-followers">Followers</p>
-        <p class="increment">99 Today</p>
+        <img class="up-img" src="images/icon-up.svg" alt="up icon">
+        <p class="positive-increment">99 Today</p>
       </div>
-      <div class="card-lg">
+      <div class="card-lg insta-wrapper">
+        <img class="stats-img" src="images/icon-instagram.svg" alt="facebook">
         <p class="username">@realnathanf</p>
         <p class="num-followers">11k</p>
         <p class="title-followers">Followers</p>
-        <p class="increment">1099 Today</p>
+        <img class="up-img" src="images/icon-up.svg" alt="up icon">
+        <p class="positive-increment">1099 Today</p>
       </div>
-      <div class="card-lg">
+      <div class="card-lg yt-red">
+        <img class="stats-img" src="images/icon-youtube.svg" alt="facebook">
         <p class="username">Nathan F.</p>
         <p class="num-followers">8239</p>
         <p class="title-followers">Subscribers</p>
-        <p class="increment">144 Today</p>
+        <img class="down-img" src="images/icon-down.svg" alt="up icon">
+        <p class="negative-increment">144 Today</p>
       </div>
     </section>
 
@@ -60,48 +67,56 @@
       <div id="overview-title">
         <h2>Overview - Today</h2>
       </div>
-      <div class="row-one">
+      <div class="row-one row">
         <div class="card-sm">
           <p class="interactions">Page Views</p>
+          <img class="lower-social-img" src="images/icon-facebook.svg" alt="facebook icon">
           <p class="num-interactions">87</p>
-          <p class="perc">3%</p>
+          <p class="positive-perc"><img src="images/icon-up.svg" alt="up icon">3%</p>
         </div>
         <div class="card-sm">
           <p class="interactions">Likes</p>
+          <img class="lower-social-img" src="images/icon-facebook.svg" alt="facebook icon">
           <p class="num-interactions">52</p>
-          <p class="perc">2%</p>
+          <p class="negative-perc"><img src="images/icon-down.svg" alt="up icon">2%</p>
         </div>
         <div class="card-sm">
           <p class="interactions">Likes</p>
+          <img class="lower-social-img" src="images/icon-instagram.svg" alt="facebook icon">
           <p class="num-interactions">5462</p>
-          <p class="perc">2257%</p>
+          <p class="positive-perc"><img src="images/icon-up.svg" alt="up icon">2257%</p>
         </div>
         <div class="card-sm">
           <p class="interactions">Profile Views</p>
+          <img class="lower-social-img" src="images/icon-instagram.svg" alt="facebook icon">
           <p class="num-interactions">52k</p>
-          <p class="perc">1375%</p>
+          <p class="positive-perc"><img src="images/icon-up.svg" alt="up icon">1375%</p>
         </div>
       </div>
-      <div class="row-two">
+      <div class="row-two row">
         <div class="card-sm">
           <p class="interactions">Retweets</p>
+          <img class="lower-social-img" src="images/icon-twitter.svg" alt="facebook icon">
           <p class="num-interactions">117</p>
-          <p class="perc">303%</p>
+          <p class="positive-perc"><img src="images/icon-up.svg" alt="up icon">303%</p>
         </div>
         <div class="card-sm">
           <p class="interactions">Likes</p>
+          <img class="lower-social-img" src="images/icon-twitter.svg" alt="facebook icon">
           <p class="num-interactions">507</p>
-          <p class="perc">553%</p>
+          <p class="positive-perc"><img src="images/icon-up.svg" alt="up icon">553%</p>
         </div>
         <div class="card-sm">
           <p class="interactions">Likes</p>
-          <p class="num-interations">107</p>
-          <p class="perc">19%</p>
+          <img class="lower-social-img" src="images/icon-youtube.svg" alt="facebook icon">
+          <p class="num-interactions">107</p>
+          <p class="negative-perc"><img src="images/icon-down.svg" alt="up icon">19%</p>
         </div>
         <div class="card-sm">
           <p class="interactions">Total Views</p>
+          <img class="lower-social-img" src="images/icon-youtube.svg" alt="facebook icon">
           <p class="num-interactions">1407</p>
-          <p class="perc">12%</p>
+          <p class="negative-perc"><img src="images/icon-down.svg" alt="up icon">12%</p>
         </div>
       </div>
     </section>
@@ -119,20 +134,20 @@
 }
 // function to toggle between light and dark theme
 function toggleTheme() {
-  if (localStorage.getItem('theme') === 'light'){
-  setTheme('dark');
+  if (localStorage.getItem('theme') === 'light-theme'){
+  setTheme('dark-theme');
   } else {
-  setTheme('light');
+  setTheme('light-theme');
   }
 }
 // Immediately invoked function to set the theme on initial load
-// (function () {
-//   if (localStorage.getItem('theme') === 'dark') {
-//    setTheme('dark');
-//   } else {
-//    setTheme('light');
-//   }
-// })();
+(function () {
+  if (localStorage.getItem('theme') === 'dark-theme') {
+   setTheme('dark-theme');
+  } else {
+   setTheme('light-theme');
+  }
+})();
   </script>
 </body>
 </html>
