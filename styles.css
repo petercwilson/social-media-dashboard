@@ -1,6 +1,6 @@
 html, body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   /* border: 5px solid lightsalmon; */
   background: var(--bg);
   max-width: 1440px;
@@ -19,33 +19,32 @@ a:hover {
 }
 
 /* THEMES STYLING */
-
 .light-theme {
-  --bg: hsl(0, 0%, 100%);
-  --topbg: hsl(225, 100%, 98%);
-  --cardbg: hsl(227, 47%, 96%);
-  --smtext: hsl(228, 34%, 66%);
-  --lgtext: hsl(230, 17%, 14%);
-  --gradDark: hsl(210, 78%, 56%);
-  --gradLight: hsl(146, 68%, 55%);
-  --toggle: linear-gradient(to right, var(--gradDark), var(--gradLight));
-  --toggleInside: hsl(0, 0%, 100%);
-  --labelColor: hsl(228, 12%, 44%);
-  --hover: hsl(227, 47%, 94%);
+  --bg:hsl(0, 0%, 100%);
+  --topbg:hsl(225, 100%, 98%);
+  --cardbg:hsl(227, 47%, 96%);
+  --smtext:hsl(228, 34%, 66%);
+  --lgtext:hsl(230, 17%, 14%);
+  --gradDark:hsl(210, 78%, 56%);
+  --gradLight:hsl(146, 68%, 55%);
+  --toggle:linear-gradient(to right, var(--gradDark), var(--gradLight));
+  --toggleInside:hsl(0, 0%, 100%);
+  --labelColor:hsl(228, 12%, 44%);
+  --hover:hsl(227, 47%, 94%);
 }
 
 .dark-theme {
-  --bg: hsl(230, 17%, 14%);
-  --topbg: hsl(232, 19%, 15%);
-  --cardbg: hsl(228, 28%, 20%);
-  --smtext: hsl(228, 12%, 44%);
-  --lgtext: hsl(0, 0%, 100%);
-  --gradDark: hsl(210, 78%, 56%);
-  --gradLight: hsl(146, 68%, 55%);
-  --toggle: linear-gradient(to right, var(--gradDark), var(--gradLight));
-  --toggleInside: hsl(230, 17%, 14%);
-  --labelColor: hsl(228, 34%, 66%);
-  --hover: hsl(228, 47%, 20%);
+  --bg:hsl(230, 17%, 14%);
+  --topbg:hsl(232, 19%, 15%);
+  --cardbg:hsl(228, 28%, 20%);
+  --smtext:hsl(228, 12%, 44%);
+  --lgtext:hsl(0, 0%, 100%);
+  --gradDark:hsl(210, 78%, 56%);
+  --gradLight:hsl(146, 68%, 55%);
+  --toggle:linear-gradient(to right, var(--gradDark), var(--gradLight));
+  --toggleInside:hsl(230, 17%, 14%);
+  --labelColor:hsl(228, 34%, 66%);
+  --hover:hsl(228, 47%, 20%);
 }
 
 main {
@@ -57,11 +56,11 @@ main {
 }
 
 /* TOGGLE SWITCH STYLING */
-
 .switch {
   width: 24rem;
   position: relative;
 }
+
 .switch input {
   position: absolute;
   top: 0;
@@ -69,22 +68,27 @@ main {
   opacity: 0;
   cursor: pointer;
 }
+
 .switch input:checked {
   z-index: 1;
 }
+
 .switch input:checked + label {
   opacity: 1;
   cursor: default;
 }
+
 .switch input:not(:checked) + label:hover {
   opacity: 0.5;
 }
+
 .switch label {
   color: var(--smtext);
   opacity: 0.33;
   transition: opacity 0.25s ease;
   cursor: pointer;
 }
+
 .switch .toggle-outside {
   height: 100%;
   border-radius: 2rem;
@@ -92,12 +96,14 @@ main {
   overflow: hidden;
   transition: 0.25s ease all;
 }
+
 .switch .toggle-inside {
   border-radius: 5rem;
   background: var(--toggleInside);
   position: absolute;
   transition: 0.25s ease all;
 }
+
 .switch--horizontal {
   width: 18rem;
   height: 1rem;
@@ -105,12 +111,14 @@ main {
   font-size: 0;
   margin-bottom: 1rem;
 }
+
 .switch--horizontal input {
   height: 3rem;
   width: 6rem;
   left: 6rem;
   margin: 0;
 }
+
 .switch--horizontal label {
   font-size: 1rem;
   font-weight: 700;
@@ -122,28 +130,32 @@ main {
   margin: 0;
   text-align: center;
 }
+
 .switch--horizontal label:last-of-type {
   margin-left: 6rem;
 }
+
 .switch--horizontal .toggle-outside {
   background: var(--toggle);
   position: absolute;
   width: 2rem;
   left: 6rem;
 }
+
 .switch--horizontal .toggle-inside {
   height: 1rem;
   width: 1rem;
 }
+
 .switch--horizontal input:checked ~ .toggle-outside .toggle-inside {
   left: 0.25rem;
 }
+
 .switch--horizontal input ~ input:checked ~ .toggle-outside .toggle-inside {
   left: 1.25rem;
 }
 
 /* HEADER ROW */
-
 header {
   display: flex;
   flex-direction: row;
@@ -156,14 +168,14 @@ header {
 h1 {
   font-weight: 700;
   color: var(--lgtext);
-  line-height: .5rem;
+  line-height: 0.5rem;
 }
 
 h3 {
   font-weight: 700;
   color: var(--smtext);
   font-size: 14px;
-  line-height: .5rem;
+  line-height: 0.5rem;
 }
 
 #info {
@@ -181,7 +193,6 @@ h3 {
 }
 
 /* TOP ROW STATS */
-
 #stats-row {
   display: flex;
   flex-direction: row;
@@ -198,7 +209,7 @@ h3 {
 }
 
 .card-lg:hover {
-  background-color: var(--hover);
+  background: var(--hover);
 }
 
 .stats-img {
@@ -226,23 +237,22 @@ h3 {
 }
 
 .fb-blue {
-  border-top: 4px solid hsl(195, 100%, 50%);
+  border-top: 4px solid deepskyblue;
 }
 
 .twitter-blue {
-  border-top: 4px solid hsl(203, 89%, 53%);
+  border-top: 4px solid #1ca0f2;
 }
 
 .insta-wrapper {
-  background: linear-gradient(var(--cardbg), var(--cardbg)), 
-              linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 38%, 46%));
+  background: linear-gradient(var(--cardbg), var(--cardbg)), linear-gradient(to right, #fdc468, #a24977);
   border-top: 4px solid transparent;
   background-repeat: no-repeat;
   background-origin: padding-box, border-box;
 }
 
 .insta-wrapper:hover {
-  background: var(--hover);
+  background-color: var(--hover);
 }
 
 .username {
@@ -257,14 +267,14 @@ h3 {
 }
 
 .yt-red {
-  border-top: 4px solid hsl(348, 97%, 39%);
+  border-top: 4px solid #c4032a;
 }
 
 .num-followers {
   font-size: 55px;
   color: var(--lgtext);
   font-weight: 700;
-  line-height: .1rem;
+  line-height: 0.1rem;
   margin-bottom: 30px;
 }
 
@@ -279,14 +289,14 @@ h3 {
   font-size: 10px;
   font-weight: 700;
   padding-top: 15px;
-  color: hsl(163, 72%, 41%);
+  color: #1db489;
 }
 
 .negative-increment {
   font-size: 10px;
   font-weight: 700;
   padding-top: 15px;
-  color: hsl(356, 69%, 56%);
+  color: #dc414c;
 }
 
 /* OVERVIEW ROWS */
@@ -317,7 +327,7 @@ h3 {
 .positive-perc {
   font-size: 10px;
   font-weight: 700;
-  color: hsl(163, 72%, 41%);
+  color: #1db489;
   position: relative;
   bottom: 66px;
   right: 30px;
@@ -333,7 +343,7 @@ h3 {
 .negative-perc {
   font-size: 10px;
   font-weight: 700;
-  color: hsl(356, 69%, 56%);
+  color: #dc414c;
   position: relative;
   bottom: 66px;
   right: 30px;
@@ -392,17 +402,20 @@ h3 {
 }
 
 /* FOOTER */
-
 .attribution {
   color: var(--smtext);
-  font-size: 11px; 
+  font-size: 11px;
   text-align: center;
   margin-top: 120px;
 }
 
-.attribution a { 
+.attribution a {
   color: var(--smtext);
-  font-size: 11px; 
+  font-size: 11px;
   text-align: center;
   text-decoration: none;
 }
+
+/*# sourceMappingURL=styles.css.map */
+
+/*# sourceMappingURL=styles.css.map */
